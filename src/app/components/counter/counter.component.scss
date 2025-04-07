@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    gap: 40px;
+    background-color: rgb(142, 189, 231);
+    border-radius: 24px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    height: 300px;
+}
+
+.container-contatore, .container-doppio{
+    display: flex;
+    border: dotted 0.2px black;
+    border-radius: 24px;
+    padding: 4%;
+    font-size: 1.5rem;
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+}
+
+.contatore-txt{
+    font-weight: 500;
+    font-size: 2rem;
+    
+}
+.doppio-txt{
+    font-weight: 900;
+    font-size: 2rem;
+    
+}
