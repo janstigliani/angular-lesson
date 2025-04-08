@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { CounterComponent } from './components/counter/counter.component';
 import { CommonModule } from '@angular/common';
 import { ControlsComponent } from './components/controls/controls.component';
+import { TestComponent } from './components/test/test.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CounterComponent, CommonModule, ControlsComponent],
+  imports: [RouterOutlet, CounterComponent, CommonModule, ControlsComponent, TestComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
