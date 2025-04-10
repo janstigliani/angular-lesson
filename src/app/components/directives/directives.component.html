@@ -1,0 +1,47 @@
+<!-- <div [ngClass]= "sonoFelicio ? 'felice' : 'triste' ">esprimo le mie emozioni con i colori</div> -->
+<div [ngClass]= "currentClasses">esprimo le mie emozioni con i colori</div>
+<button (click)="changeMood()">changeMood</button>
+<!-- <div [ngStyle]="{'font-size': sonoFelicio? '50px' : '22px' }">sono molto stiloso</div> -->
+<div [ngStyle]="currentStyles">sono molto stiloso</div>
+
+<p *ngFor="let pippo of elements">{{pippo}}</p>
+<p *ngFor="let pippo of elements; let i = index">{{i}}) {{pippo}}</p>
+
+@for(element of elements; track element) {
+    <p>{{element}}</p>
+}
+
+<img *ngIf="sonoFelicio" src="https://www.raicultura.it/cropgd/900x520/dl/img/2020/04/08/1586351246504_abstract-2468874_1920.jpg" alt="">
+
+@if(!sonoFelicio){
+    <img src="https://media.istockphoto.com/id/814423752/it/foto/occhio-di-modello-con-make-up-artistico-colorato-primo.jpg?s=612x612&w=0&k=20&c=OFhqyikwC47uoihOoQdQ4hnyVPo3qhyFPWldANTEjzk=" alt="">
+}
+<!-- 
+<p *ngIf="imtrue">sono vero</p>
+<p *ngIf="!imtrue">sono falso</p> -->
+
+@if(imtrue){
+    <p>sono vero</p>
+} @else {
+    <p>sono falso</p>
+}
+
+<button (click)="changeIfElse()">cambia if else</button>
+
+<!-- <div *ngIf="imtrue; else alternativeContent">
+    <p>sono vero vero</p>
+</div>
+<ng-template #alternativeContent>
+    <p>sono falso falso</p>
+</ng-template> -->
+
+<div [ngSwitch]="triplechoice">
+    <p *ngSwitchCase=1>scelta1</p>
+    <p *ngSwitchCase=2>scelta2</p>
+    <p *ngSwitchDefault>sceltadefault</p>
+
+
+</div>
+<ng-template #alternativeContent>
+    <p>sono falso falso</p>
+</ng-template>
